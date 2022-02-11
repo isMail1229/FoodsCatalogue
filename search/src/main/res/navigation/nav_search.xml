@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_search"
+    app:startDestination="@id/foodSearchFragment">
+
+    <fragment
+        android:id="@+id/foodSearchFragment"
+        android:name="id.mailstudio.search.ui.search_home.FoodSearchFragment"
+        android:label="Food Search"
+        tools:layout="@layout/food_search_fragment">
+        <action
+            android:id="@+id/action_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment" />
+        <argument
+            android:name="filterFood"
+            app:argType="id.mailstudio.search.domain.FoodFilterUIModel"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+
+        <action
+            android:id="@+id/action_to_foodFilterSearchFragment"
+            app:destination="@id/foodFilterSearchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/foodFilterSearchFragment"
+        android:name="id.mailstudio.search.ui.filter.FoodFilterSearchFragment"
+        android:label="Filter Food"
+        tools:layout="@layout/food_filter_fragment">
+        <argument
+            android:name="foodFilterUIModel"
+            app:argType="id.mailstudio.search.domain.FoodFilterUIModel"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="id.mailstudio.foodcatalogue.ui.detail.FoodDetailFragment"
+        android:label="FoodDetailFragment"
+        tools:layout="@layout/food_detail_fragment">
+
+        <argument
+            android:name="foodUIModel"
+            app:argType="id.mailstudio.foodcatalogue.domain.FoodUIModel" />
+
+    </fragment>
+
+</navigation>

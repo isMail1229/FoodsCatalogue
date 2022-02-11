@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_help_home_label"
+        style="@style/FoodCatalogue.Heading.7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="@string/help_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_first_bullet"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:layout_constraintStart_toStartOf="@id/tv_help_home_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_help_home_description"
+        app:srcCompat="@drawable/ic_bullet"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_help_home_description"
+        style="@style/FoodCatalogue.Label.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/help_title_desc"
+        android:textColor="@color/gray_2"
+        app:layout_constraintEnd_toEndOf="@id/tv_help_home_label"
+        app:layout_constraintStart_toEndOf="@id/iv_first_bullet"
+        app:layout_constraintTop_toBottomOf="@id/tv_help_home_label" />
+
+    <TextView
+        android:id="@+id/tv_how_to_use"
+        style="@style/FoodCatalogue.Heading.7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="@string/how_to_use_label"
+        app:layout_constraintEnd_toEndOf="@id/tv_help_home_label"
+        app:layout_constraintStart_toStartOf="@id/tv_help_home_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_help_home_description" />
+
+    <ImageView
+        android:id="@+id/iv_bullet_use_first"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:layout_constraintStart_toStartOf="@id/tv_help_home_label"
+        app:layout_constraintTop_toTopOf="@id/tv_use_point_1"
+        app:srcCompat="@drawable/ic_bullet"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_use_point_1"
+        style="@style/FoodCatalogue.Label.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/how_to_use_description"
+        android:textColor="@color/gray_2"
+        app:layout_constraintEnd_toEndOf="@id/tv_help_home_label"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/iv_bullet_use_first"
+        app:layout_constraintTop_toBottomOf="@id/tv_how_to_use" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_understand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        style="@style/FoodCatalogue.Label.Medium"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_button_primary"
+        android:text="@string/understand_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_help_home_label"
+        app:layout_constraintStart_toStartOf="@id/tv_help_home_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_use_point_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="help_title">What is this app ?</string>
+    <string name="help_title_desc">Food Catalogue is apps for list food from other country</string>
+    <string name="how_to_use_description">Just search food what you want. if exist press favorite icon in detail to save.</string>
+    <string name="app_name">Food Catalogue</string>
+    <string name="understand_text">I Understand</string>
+    <string name="title_favorite">Food Favorite</string>
+    <string name="title_search">Food Search</string>
+    <string name="title_food_detail">Food Detail</string>
+    <string name="text_data_not_found">Data Not Found</string>
+    <string name="retry_label">Retry</string>
+    <string name="filter_all_label">All</string>
+    <string name="filter_favorite_label">Favorite</string>
+    <string name="filter_un_favorite_label">Not Favorite</string>
+    <string name="ingredient_label">Ingredient</string>
+    <string name="instruction_label">Instruction</string>
+    <string name="list_food_label">List Food</string>
+    <string name="list_food_favorite_label">List Favorite Food</string>
+    <string name="setting_label">Settings</string>
+    <string name="how_to_use_label">How To Use</string>
+    <string name="about_label">About</string>
+    <string name="error_message">Something went wrong</string>
+    <string name="search_label">Search</string>
+    <string name="search_hint_label">Search Here</string>
+    <string name="filter_label">Filter</string>
+    <string name="category_label">Categories</string>
+    <string name="area_label">Area</string>
+    <string name="filter_reset_label">Reset</string>
+    <string name="filter_apply_label">Apply</string>
+    <string name="image_error_text_description">Image Error</string>
+    <string name="about_message">Food Catalogue Apps V1</string>
+</resources>

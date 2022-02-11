@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/ab_filter"
+        layout="@layout/food_search_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_filter_category_title"
+        style="@style/FoodCatalogue.Label.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/category_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ab_filter" />
+
+    <Spinner
+        android:id="@+id/dropdown_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@drawable/bg_spinner"
+        android:popupBackground="@color/white"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_filter_category_title" />
+
+    <TextView
+        android:id="@+id/tv_filter_area_title"
+        style="@style/FoodCatalogue.Label.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/area_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dropdown_category" />
+
+    <Spinner
+        android:id="@+id/dropdown_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:background="@drawable/bg_spinner"
+        android:popupBackground="@color/white"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_filter_area_title" />
+
+    <TextView
+        android:id="@+id/tv_filter_favorite_label"
+        style="@style/FoodCatalogue.Label.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:text="@string/filter_favorite_label"
+        android:textColor="@color/gray_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dropdown_area" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_favorite_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_filter_favorite_label">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/mb_all_favorite"
+            style="@style/FoodCatalogue.Label.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:background="@drawable/bg_item_box"
+            android:button="@drawable/bg_selector_radio"
+            android:layoutDirection="ltr"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:textColor="@color/gray_2"
+            tools:ignore="RtlSymmetry"
+            tools:text="All" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/mb_favorite"
+            style="@style/FoodCatalogue.Label.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/bg_item_box"
+            android:button="@drawable/bg_selector_radio"
+            android:layoutDirection="ltr"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:text="@string/filter_favorite_label"
+            android:textColor="@color/gray_2"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/mb_not_favorite"
+            style="@style/FoodCatalogue.Label.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/bg_item_box"
+            android:button="@drawable/bg_selector_radio"
+            android:layoutDirection="ltr"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:text="@string/filter_un_favorite_label"
+            android:textColor="@color/gray_2"
+            tools:ignore="RtlSymmetry" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_reset"
+        style="@style/FoodCatalogue.Label.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_button_secondary"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_16ssp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="@string/filter_reset_label"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_apply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group_favorite_status" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_apply"
+        style="@style/FoodCatalogue.Label.Medium"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/bg_button_primary"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_16ssp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="@string/filter_apply_label"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/btn_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_reset"
+        app:layout_constraintTop_toTopOf="@id/btn_reset" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

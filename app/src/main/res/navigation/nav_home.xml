@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/foodHomeFragment">
+
+    <fragment
+        android:id="@+id/foodHomeFragment"
+        android:name="id.mailstudio.foodcatalogue.ui.home.FoodHomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/food_home_fragment">
+
+        <action
+            android:id="@+id/action_to_foodInformationFragment"
+            app:destination="@id/foodInformationFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/foodInformationFragment"
+        android:name="id.mailstudio.foodcatalogue.ui.other.FoodInformationFragment"
+        android:label="FoodInformationFragment"
+        tools:layout="@layout/food_info_layout" />
+
+    <include-dynamic
+        android:id="@+id/nav_search"
+        app:graphPackage="id.mailstudio.search"
+        app:graphResName="nav_search"
+        app:moduleName="search">
+
+    </include-dynamic>
+</navigation>

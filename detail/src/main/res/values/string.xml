@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ingredient_label">Ingredient</string>
+    <string name="instruction_label">Instruction</string>
+    <string name="title_detail">Food Detail</string>
+</resources>

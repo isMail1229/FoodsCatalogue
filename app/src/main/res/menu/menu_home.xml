@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_label"
+        app:showAsAction="always"
+        tools:ignore="UnusedAttribute" />
+
+    <item
+        android:id="@+id/menu_favorite"
+        android:icon="@drawable/ic_favorite_fill"
+        android:title="@string/filter_favorite_label"
+        app:showAsAction="always"
+        tools:ignore="UnusedAttribute" />
+
+    <item
+        android:id="@+id/menu_other"
+        android:icon="@drawable/ic_other"
+        android:title=""
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/menu_setting"
+                android:title="@string/setting_label"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/menu_info"
+                android:title="@string/how_to_use_label"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/menu_about"
+                android:title="@string/about_label"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>
