@@ -4,6 +4,7 @@ object Constants {
 
     const val BASE_MEAL_URL = "https://www.themealdb.com/api/json/"
     const val API_KEY = "v2/9973533/"
+    const val CERTIFICATE_SHA = "sha256/tbb5eUN4H4PLVKGFjsN8Jp2CsBwwoC6GzxIbpn0HNM="
 
     const val DATABASE_NAME = "food.db"
     const val FOOD_TABLE_NAME = "food"

@@ -6,6 +6,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import id.mailstudio.core.data.datasource.remote.network.FoodAPIService
 import id.mailstudio.core.utils.Constants
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -19,11 +20,18 @@ class NetworkModule {
 
     @Provides
     fun provideOkHttpClient(): OkHttpClient {
+        val hostname = "themealdb.com"
+        val certificatePinner = CertificatePinner.Builder()
+            .add(hostname, Constants.CERTIFICATE_SHA)
+            .build()
         return OkHttpClient.Builder()
             .addInterceptor(
                 HttpLoggingInterceptor()
-                .setLevel(HttpLoggingInterceptor.Level.BODY))
+                    .setLevel(HttpLoggingInterceptor.Level.BODY)
+            )
             .connectTimeout(50L, TimeUnit.SECONDS)
+            .readTimeout(100L, TimeUnit.SECONDS)
+            .certificatePinner(certificatePinner)
             .build()
     }
 
