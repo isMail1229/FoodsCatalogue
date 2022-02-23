@@ -20,7 +20,7 @@ class NetworkModule {
 
     @Provides
     fun provideOkHttpClient(): OkHttpClient {
-        val hostname = "themealdb.com"
+        val hostname = Constants.HOSTNAME
         val certificatePinner = CertificatePinner.Builder()
             .add(hostname, Constants.CERTIFICATE_SHA)
             .build()
