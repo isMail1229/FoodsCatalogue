@@ -38,9 +38,9 @@ android {
 dependencies {
 
     //room
-    api "androidx.room:room-runtime:2.4.1"
-    kapt "androidx.room:room-compiler:2.4.1"
-    androidTestImplementation "androidx.room:room-testing:2.4.1"
+    api "androidx.room:room-runtime:2.4.2"
+    kapt "androidx.room:room-compiler:2.4.2"
+    androidTestImplementation "androidx.room:room-testing:2.4.2"
 
     //retrofit
     api "com.squareup.retrofit2:retrofit:2.9.0"
@@ -50,9 +50,9 @@ dependencies {
     //coroutine
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
-    implementation "androidx.room:room-ktx:2.4.1"
+    implementation "androidx.room:room-ktx:2.4.2"
 
-    api "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
+    api "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
     api "androidx.activity:activity-ktx:1.4.0"
     api "androidx.fragment:fragment-ktx:1.4.1"
 
