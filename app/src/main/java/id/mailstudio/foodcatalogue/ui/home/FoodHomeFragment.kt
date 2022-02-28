@@ -134,10 +134,8 @@ class FoodHomeFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_search -> {
-//                val uri = Uri.parse("foodcatalogue://search")
-//                startActivity(Intent(Intent.ACTION_VIEW, uri))
-                val direction = FoodHomeFragmentDirections.
-                findNavController().navigateSafe()
+                val uri = Uri.parse("foodcatalogue://search")
+                startActivity(Intent(Intent.ACTION_VIEW, uri))
             }
             R.id.menu_favorite -> {
                 val uri = Uri.parse("foodcatalogue://favorite")
