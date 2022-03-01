@@ -21,12 +21,4 @@
         android:name="id.mailstudio.foodcatalogue.ui.other.FoodInformationFragment"
         android:label="FoodInformationFragment"
         tools:layout="@layout/food_info_layout" />
-
-    <include-dynamic
-        android:id="@+id/nav_search"
-        app:graphPackage="id.mailstudio.search"
-        app:graphResName="nav_search"
-        app:moduleName="search">
-
-    </include-dynamic>
 </navigation>
