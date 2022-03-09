@@ -14,6 +14,8 @@ import id.mailstudio.core.data.datasource.local.room.dao.FoodCategoryDao
 import id.mailstudio.core.data.datasource.local.room.dao.FoodDao
 import id.mailstudio.core.data.datasource.local.room.dao.FoodIngredientDao
 import id.mailstudio.core.utils.Constants
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import javax.inject.Singleton
 
 
@@ -32,12 +34,17 @@ class DatabaseModule {
 
     @Singleton
     @Provides
-    fun provideDatabase(@ApplicationContext context: Context): FoodDatabase =
-        Room.databaseBuilder(
+    fun provideDatabase(@ApplicationContext context: Context): FoodDatabase {
+        val passParse = SQLiteDatabase.getBytes("FoodCatalogueApps".toCharArray())
+        val factory = SupportFactory(passParse)
+        return Room.databaseBuilder(
             context,
             FoodDatabase::class.java,
             Constants.DATABASE_NAME
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration()
+            .openHelperFactory(factory)
+            .build()
+    }
 
     @Provides
     fun provideFoodDao(database: FoodDatabase): FoodDao =

@@ -45,12 +45,15 @@ dependencies {
     //retrofit
     api "com.squareup.retrofit2:retrofit:2.9.0"
     api "com.squareup.retrofit2:converter-gson:2.9.0"
-    api "com.squareup.okhttp3:logging-interceptor:4.9.0"
+    api "com.squareup.okhttp3:logging-interceptor:4.9.1"
 
     //coroutine
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
     implementation "androidx.room:room-ktx:2.4.2"
+
+    implementation "net.zetetic:android-database-sqlcipher:4.4.0"
+    implementation "androidx.sqlite:sqlite-ktx:2.2.0"
 
     api "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
     api "androidx.activity:activity-ktx:1.4.0"

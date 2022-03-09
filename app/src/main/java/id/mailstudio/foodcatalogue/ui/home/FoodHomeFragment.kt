@@ -163,7 +163,7 @@ class FoodHomeFragment : Fragment() {
     }
 
     private fun showSettingsDialog() {
-        val builder = AlertDialog.Builder(requireActivity())
+        val builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Choose theme")
         val styles = arrayOf("Light", "Dark", "System default")
         val themeSelected = viewModel.currentTheme.value ?: 0
