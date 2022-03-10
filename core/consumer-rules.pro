@@ -51,7 +51,6 @@
 
 # Top-level functions that can only be used by Kotlin.
 -dontwarn retrofit2.KotlinExtensions
--dontwarn retrofit2.KotlinExtensions$*
 
 # With R8 full mode, it sees no subtypes of Retrofit interfaces since they are created with a Proxy
 # and replaces all potential values with null. Explicitly keeping the interfaces prevents this.
@@ -86,6 +85,3 @@ public *;
 -keepnames class * extends java.io.Serializable
 -keep class androidx.appcompat.view.WindowCallbackWrapper { *; }
 -keep class * extends androidx.room.RoomDatabase
--keep class id.mailstudio.detail.FoodDetailActivity {public *;}
--keep class id.mailstudio.favorite.FavoriteActivity {public *;}
--keep class id.mailstudio.search.SearchActivity {public *;}
