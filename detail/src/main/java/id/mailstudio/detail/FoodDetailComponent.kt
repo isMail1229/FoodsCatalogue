@@ -3,7 +3,6 @@ package id.mailstudio.detail
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
-import id.mailstudio.core.di.CoreModule
 import id.mailstudio.core.di.RepositoryModule
 import id.mailstudio.foodcatalogue.di.ModuleDependencies
 

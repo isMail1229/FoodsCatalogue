@@ -3,7 +3,6 @@ package id.mailstudio.search.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import id.mailstudio.core.domain.usecase.FoodUseCase
-import id.mailstudio.core.utils.preferences.FoodSharedPreference
 import javax.inject.Inject
 
 class ViewModelFactory @Inject constructor(

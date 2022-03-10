@@ -7,7 +7,6 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.map
 import id.mailstudio.core.data.Resource
 import id.mailstudio.core.domain.usecase.FoodUseCase
-import id.mailstudio.core.utils.preferences.FoodSharedPreference
 import id.mailstudio.foodcatalogue.domain.toListFoodUIModel
 import id.mailstudio.search.domain.FoodAreaUIModel
 import id.mailstudio.search.domain.FoodAreaUIState

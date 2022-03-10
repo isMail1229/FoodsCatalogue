@@ -70,7 +70,7 @@ class FavoriteActivity : AppCompatActivity() {
     }
 
     private fun observeViewModel() {
-        viewModel.favorite.observe(this, {
+        viewModel.favorite.observe(this) {
             favoriteAdapter.setItem(it.toListFoodUIModel())
             if (it.isNotEmpty()) {
                 binding.rvFavoriteListFoodFavorite.visible()
@@ -79,7 +79,7 @@ class FavoriteActivity : AppCompatActivity() {
                 binding.rvFavoriteListFoodFavorite.gone()
                 binding.tvNotFound.visible()
             }
-        })
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
