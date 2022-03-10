@@ -31,7 +31,6 @@
         android:layout_marginEnd="@dimen/_8sdp"
         android:ellipsize="end"
         android:maxLines="2"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@id/tv_home_is_favorite"
         app:layout_constraintStart_toEndOf="@id/iv_food_thumbnail"
         app:layout_constraintTop_toTopOf="@id/iv_food_thumbnail"
@@ -54,7 +53,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_4sdp"
-        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@id/tv_food_title"
         app:layout_constraintTop_toBottomOf="@id/tv_food_title"
         tools:text="French" />
