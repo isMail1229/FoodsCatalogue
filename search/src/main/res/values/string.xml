@@ -3,13 +3,9 @@
     <string name="filter_all_label">All</string>
     <string name="filter_favorite_label">Favorite</string>
     <string name="filter_un_favorite_label">Not Favorite</string>
-    <string name="error_message">Something went wrong</string>
-    <string name="search_label">Search</string>
-    <string name="search_hint_label">Search Here</string>
     <string name="filter_label">Filter</string>
     <string name="category_label">Categories</string>
     <string name="area_label">Area</string>
     <string name="filter_reset_label">Reset</string>
     <string name="filter_apply_label">Apply</string>
-    <string name="image_error_text_description">Image Error</string>
 </resources>
