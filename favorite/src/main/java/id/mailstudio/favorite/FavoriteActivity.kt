@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.activity.viewModels
+import androidx.annotation.Keep
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.EntryPointAccessors
@@ -17,6 +18,7 @@ import id.mailstudio.foodcatalogue.di.ModuleDependencies
 import id.mailstudio.foodcatalogue.domain.toListFoodUIModel
 import javax.inject.Inject
 
+@Keep
 class FavoriteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFavoriteBinding

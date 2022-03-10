@@ -3,6 +3,7 @@ package id.mailstudio.detail
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.activity.viewModels
+import androidx.annotation.Keep
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +16,7 @@ import id.mailstudio.foodcatalogue.di.ModuleDependencies
 import id.mailstudio.foodcatalogue.domain.FoodUIModel
 import javax.inject.Inject
 
+@Keep
 class FoodDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFoodDetailBinding
@@ -69,7 +71,7 @@ class FoodDetailActivity : AppCompatActivity() {
     }
 
     private fun observeViewModel() {
-        viewModel.foodModel.observe(this, { foodModel ->
+        viewModel.foodModel.observe(this) { foodModel ->
             foodModel?.let {
                 Glide.with(this)
                     .load(it.foodImage)
@@ -81,16 +83,16 @@ class FoodDetailActivity : AppCompatActivity() {
                 binding.tvInstruction.text = it.foodInstruction
                 setStatusFavorite(it.isFavorite)
             }
-        })
+        }
 
-        viewModel.isFavorite.observe(this, {
+        viewModel.isFavorite.observe(this) {
             setStatusFavorite(it)
-        })
+        }
 
-        viewModel.foodIngredient.observe(this, {
+        viewModel.foodIngredient.observe(this) {
             if (it != null)
                 ingredientAdapter.setItem(it)
-        })
+        }
     }
 
     private fun setStatusFavorite(statusFavorite: Boolean) {

@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import id.mailstudio.favorite.databinding.FoodFavoriteListItemBinding
 import id.mailstudio.foodcatalogue.R
-import id.mailstudio.foodcatalogue.databinding.FoodListItemBinding
 import id.mailstudio.foodcatalogue.domain.FoodUIModel
 
 
@@ -15,13 +15,13 @@ class FavoriteListAdapter : RecyclerView.Adapter<FavoriteListAdapter.FavoriteVH>
     private var listItem = listOf<FoodUIModel>()
     var onItemClick: ((FoodUIModel) -> Unit)? = null
 
-    class FavoriteVH(val viewBinding: FoodListItemBinding) :
+    class FavoriteVH(val viewBinding: FoodFavoriteListItemBinding) :
         RecyclerView.ViewHolder(viewBinding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteVH {
         val layoutInflater =
             LayoutInflater.from(parent.context)
-        val viewBinding = FoodListItemBinding.inflate(layoutInflater, parent, false)
+        val viewBinding = FoodFavoriteListItemBinding.inflate(layoutInflater, parent, false)
         return FavoriteVH(viewBinding)
     }
 

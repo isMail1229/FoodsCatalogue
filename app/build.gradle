@@ -5,6 +5,8 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 apply from: '../shared_dependencies.gradle'
@@ -15,7 +17,7 @@ android {
     defaultConfig {
         applicationId "id.mailstudio.foodcatalogue"
         minSdk 21
-        targetSdk 31
+        targetSdk 30
         versionCode 1
         versionName "1.0"
 
@@ -54,4 +56,8 @@ dependencies {
     testImplementation "org.mockito:mockito-core:3.3.3"
     testImplementation "androidx.arch.core:core-testing:2.1.0"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2"
+
+    implementation platform('com.google.firebase:firebase-bom:29.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
 }

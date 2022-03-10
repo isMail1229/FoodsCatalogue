@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "753571794643",
+    "project_id": "foodcatalogue-ab697",
+    "storage_bucket": "foodcatalogue-ab697.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753571794643:android:6545114a93213c485f8e26",
+        "android_client_info": {
+          "package_name": "id.mailstudio.foodcatalogue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753571794643-n29lss6srteqhgsliti3edj2e8k3s8bs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.mailstudio.foodcatalogue",
+            "certificate_hash": "271240d39ba474887d676dde0c2505b48e514918"
+          }
+        },
+        {
+          "client_id": "753571794643-08tsid5gk4degr9u9cohjgc1t86d758j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-VnMosOLm6wArb5WflbSQ3HooCiUjvb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753571794643-08tsid5gk4degr9u9cohjgc1t86d758j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
